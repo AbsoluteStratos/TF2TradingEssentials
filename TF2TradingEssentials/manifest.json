@@ -7,7 +7,7 @@
           "128": "Images/icon128.png" },
   "description": "The tool that makes TF2 trading safer and easier. Coded and Owned By: Nicholas Geneva",
   "version": "3.0.0",
-  "update_url": "http://dl.dropboxusercontent.com/s/fgkdw71pff964yg/updates.xml",
+  "update_url": "https://raw.githubusercontent.com/DynamicSeagull/TF2TradingEssentials/master/updates.xml?token=AFRvVNUzkRwc90epsHfXbY7EmcpTvfHjks5UZtCIwA%3D%3D",
 
   "browser_action": {
     "default_icon": {
