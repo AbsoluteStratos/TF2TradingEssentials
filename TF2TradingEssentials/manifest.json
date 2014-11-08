@@ -1,0 +1,58 @@
+{
+  "manifest_version": 2,
+
+  "name": "Team Fortress 2 Trading Essentials",
+  "icons": { "16": "Images/icon16.png",
+           "48": "Images/icon48.png",
+          "128": "Images/icon128.png" },
+  "description": "The tool that makes TF2 trading safer and easier. Coded and Owned By: Nicholas Geneva",
+  "version": "3.0.0",
+  "update_url": "http://dl.dropboxusercontent.com/s/fgkdw71pff964yg/updates.xml",
+
+  "browser_action": {
+    "default_icon": {
+      "19": "Images/icon19.png",           
+      "38": "Images/icon38.png"},
+      "default_title": "Trading Essentials",
+      "default_popup": "popup.html" 
+  },
+  "background":{
+  	  "page": "background.html"
+
+  	},
+  "content_scripts": [
+    {
+      "matches": ["http://www.tf2outpost.com/*"],
+      "js": ["Outpost/outpostContent.js"]
+    },
+    {
+      "matches": ["http://www.tf2outpost.com/new/*"],
+      "js": ["Outpost/outpostContentNew.js"]
+    },
+    {
+      "matches": ["http://steamcommunity.com/tradeoffer/*"],
+      "js": ["SteamTrade/SteamOfferContent.js"]
+    },
+    {
+      "matches": ["https://steamcommunity.com/trade/*"],
+      "js": ["SteamTrade/SteamTradeContent.js"]
+    },
+    {
+      "matches": ["https://steamcommunity.com/tradeoffer/*"],
+      "js": ["SteamTrade/SteamOfferContent.js"]
+    }
+  ],
+  "permissions": [
+    "tabs", 
+    "http://*/*", 
+    "https://*/*",
+    "storage"
+  ],
+   "web_accessible_resources": [
+   "SteamTrade/SteamTradeInject.js",
+   "SteamTrade/SteamOfferInject.js",
+   "Outpost/outpostInject.js",
+   "Outpost/outpostInjectNew.js"
+   ],
+   "content_security_policy": "connect-src 'self'http://api.steampowered.com https://api.steampowered.com http://store.steampowered.com https://store.steampowered.com https://steamcommunity.com http://steamcommunity.com http://backpack.tf https://backpack.tf https://steamrep.com http://steamrep.com 'unsafe-eval'; script-src 'self' https://ajax.googleapis.com 'unsafe-eval'; object-src 'self' "
+}

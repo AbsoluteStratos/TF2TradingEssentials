@@ -1,0 +1,44 @@
+body {
+  min-width: 200px;
+  overflow-x: hidden;
+  background-color:#F4F1E9;
+}
+hr.myline{ 
+  margin-top: 2px;
+  margin-bottom: 2px;
+} 
+hr.mysmallline{ 
+  margin-top: 2px;
+  margin-bottom: 2px;
+} 
+.menu{
+   width: 90%;
+}
+.TradingHub{
+  width: 100%;
+}
+table {
+  overflow: hidden; 
+}
+@font-face {
+  font-family: myFont;
+  src: url(../Images/TF2.ttf);
+}
+#version{
+  font-size: 10px;
+  cursor: default;
+}
+table.holder{
+  background-color : transparent;
+  border: 0;
+  border-spacing: 0px;
+  padding: 0px;
+  border-collapse: separate;
+}
+td.linkbox{
+  width: 21px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-bottom: 0px;
+  margin-top: 0px
+}

@@ -1,0 +1,123 @@
+---v.2.0.0---
+-Initial Beta Release
+
+---v.2.0.1---
+-Added quick link bar in pop up
+
+---v.2.0.2---
+-Adjusted shading on quicklink bar
+-Added "Powered By:" title in dashboard
+-Darken Buds
+-Removed Trade Notes from Outpost Slider
+-Removed Trade Notes from Bazaar Slider
+-Added SOP to quick link menu
+-Adjust scrap.tf preload text
+
+---v.2.1.0---
+-support for bazaar custom icons
+-Added background color for added steamdb changes to tf2
+-Fixed picture load error through but a tf2shop image in the bazaar request
+-Fixed trade arrow centering issues
+-Added Dispenser.tf logging
+-Added Connection Messages for trade orbits
+-Added draggable option on trade orbits for custom orders
+-Saves your current log order
+
+---v.2.1.1---
+-Adjusted Scroll Speed with Sortable UI
+-Fix double backpack.tf price
+-Fixed Scrap.tf people in queue 
+
+---v.2.1.2---
+-Adjusted all injects for new bp.tf crate ordering
+-Added Crate pricing on outpost
+
+---v.2.2.0---
+-Fixed resource errors for scrap and dispenser gets
+-Added quicklink search
+-Added quicklink bar
+-Quicklink Favorites
+-Trade Offer Inject
+-Make First Time Tutorial
+-Cleaned Up Files to Make File Smaller
+
+---v.2.2.0 RELEASE---
+-Fixed auto updating
+-Made favorites not request steam xml
+-Fixed quick link tool layering link issue
+-Fix Joy ride Quick Search tool tip location
+-Added error function on quick search
+
+---v.2.2.2---
+-Auto upgrader Added!
+
+---v.2.2.3---
+-Added Log out to Upgrader
+-Fixed Range Problem with Upgrader
+
+---v.2.2.4---
+-Spelling Error
+-Fixed Name Tag Alt for bp.tf prices
+-Made upgrader range boxes bigger
+-Set captcha input focus
+-Can press enter to submit captchas
+-Fixed some responsive issues with the auto upgrader gui
+-Joyride autoupdate
+-Added comment plaque for outpost trades
+-Added no money error for upgrader
+
+---v.2.3.0---
+-Captcha Buster (20%-25% Success)
+-Upgrader can retry failed accounts
+-Change default password algo
+-Updated Upgrader GUI
+-Upgrader is now in GAMMA version
+-Premium Checker
+-GUI for Premium Checker
+-Fix not logged in outpost label
+-Logs On Premium Checker and Auto Upgrader Auto Scroll Down
+-Add "already premium checker" to upgrader
+-Updated Joyride
+-Clean and Commented All Trading Dashboard code
+-Scrap.tf Queue Fix
+
+---v.2.3.1---
+-Add "View Fails Only" option on upgrader and premium checker
+-Buff premium checker
+-Timeouts for connections
+
+---v.2.3.2---
+-Fixed show fails on upgrader
+-Make captcha buster stop at 40 tries
+-Fix Scrap.tf Queue
+-Updated Steamdb Feed
+
+---v.2.3.3---
+-Autoupgrader fix
+-Autoupgrade uses the custom Steam Store purchase url
+-Autoupgrader is now like 10 times faster
+-Minor Scrap.tf Bots Online change
+
+---v.2.3.3.1---
+-Autoupgrader fix
+-Auto Upgrader now only needs Steam Store
+-Auto Upgrader is now second generation
+
+---v.2.3.3.2---
+-Steam Server Stats Update
+-Added Dropdown for Server Locations
+
+---v.2.3.3.3---
+-Hover drop down for steam server status
+-Added Steam Player Count Graph
+
+---v.2.3.3.4---
+-Fixed Refresh captcha json parse
+
+---v.2.3.3.5---
+-Fixed captcha attempt counter
+
+---v.2.3.3.6---
+-Fixed captcha library load error
+
+---v.3.0.0.0---
