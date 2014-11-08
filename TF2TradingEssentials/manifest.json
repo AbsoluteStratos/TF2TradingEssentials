@@ -5,9 +5,9 @@
   "icons": { "16": "Images/icon16.png",
            "48": "Images/icon48.png",
           "128": "Images/icon128.png" },
-  "description": "The tool that makes TF2 trading safer and easier. Coded and Owned By: Nicholas Geneva",
-  "version": "3.0.0",
-
+  "description": "The tool that makes TF2 trading safer and easier. Coded By: Nick Geneva",
+  "version": "3.0.1.1",
+  "short_name": "TF2 Trading Essentials",
   "browser_action": {
     "default_icon": {
       "19": "Images/icon19.png",           
@@ -27,6 +27,10 @@
     {
       "matches": ["http://www.tf2outpost.com/new/*"],
       "js": ["Outpost/outpostContentNew.js"]
+    },
+    {
+      "matches": ["http://steamcommunity.com/trade/*"],
+      "js": ["SteamTrade/SteamTradeContent.js"]
     },
     {
       "matches": ["http://steamcommunity.com/tradeoffer/*"],
