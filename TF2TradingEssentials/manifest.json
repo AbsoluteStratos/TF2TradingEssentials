@@ -1,24 +1,25 @@
 {
   "manifest_version": 2,
-
   "name": "Team Fortress 2 Trading Essentials",
+  "version": "3.0.2.0",
+
+  "description": "The tool that makes TF2 trading safer and easier. Coded By: Nick Geneva",
+  "short_name": "TF2 Trading Essentials",
   "icons": { "16": "Images/icon16.png",
            "48": "Images/icon48.png",
           "128": "Images/icon128.png" },
-  "description": "The tool that makes TF2 trading safer and easier. Coded By: Nick Geneva",
-  "version": "3.0.1.1",
-  "short_name": "TF2 Trading Essentials",
+
   "browser_action": {
     "default_icon": {
       "19": "Images/icon19.png",           
       "38": "Images/icon38.png"},
-      "default_title": "Trading Essentials",
-      "default_popup": "popup.html" 
+     "default_title": "Trading Essentials",
+     "default_popup": "popup.html" 
   },
   "background":{
   	  "page": "background.html"
-
   	},
+
   "content_scripts": [
     {
       "matches": ["http://www.tf2outpost.com/*"],
@@ -29,33 +30,31 @@
       "js": ["Outpost/outpostContentNew.js"]
     },
     {
-      "matches": ["http://steamcommunity.com/trade/*"],
-      "js": ["SteamTrade/SteamTradeContent.js"]
+      "matches": ["*://steamcommunity.com/trade/*"],
+      "js": ["jquery-1.11.1.min.js","SteamTrade/SteamTradeContent.js"]
     },
     {
-      "matches": ["http://steamcommunity.com/tradeoffer/*"],
-      "js": ["SteamTrade/SteamOfferContent.js"]
-    },
-    {
-      "matches": ["https://steamcommunity.com/trade/*"],
-      "js": ["SteamTrade/SteamTradeContent.js"]
-    },
-    {
-      "matches": ["https://steamcommunity.com/tradeoffer/*"],
-      "js": ["SteamTrade/SteamOfferContent.js"]
+      "matches": ["*://steamcommunity.com/tradeoffer/*"],
+      "js": ["jquery-1.11.1.min.js","SteamTrade/SteamOfferContent.js"]
     }
   ],
+  "content_security_policy": "connect-src 'self' *://*.steampowered.com *://steamcommunity.com http://backpack.tf *://steamrep.com/ 'unsafe-eval'; script-src 'self' https://ajax.googleapis.com 'unsafe-eval'; object-src 'self'",
+
   "permissions": [
     "tabs", 
-    "http://*/*", 
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
     "https://*/*",
     "storage"
   ],
-   "web_accessible_resources": [
-   "SteamTrade/SteamTradeInject.js",
-   "SteamTrade/SteamOfferInject.js",
-   "Outpost/outpostInject.js",
-   "Outpost/outpostInjectNew.js"
-   ],
-   "content_security_policy": "connect-src 'self'http://api.steampowered.com https://api.steampowered.com http://store.steampowered.com https://store.steampowered.com https://steamcommunity.com http://steamcommunity.com http://backpack.tf https://backpack.tf https://steamrep.com http://steamrep.com 'unsafe-eval'; script-src 'self' https://ajax.googleapis.com 'unsafe-eval'; object-src 'self' "
+  "web_accessible_resources": [
+   	"SteamTrade/SteamTradeInject.js",
+   	"SteamTrade/SteamOfferInject.js",
+   	"SteamTrade/StyleListener.jquery.min.js",
+   	"Outpost/outpostInject.js",
+   	"Outpost/outpostInjectNew.js",
+   	"Images/*.png"
+  ]
+
 }
