@@ -251,14 +251,15 @@ setTimeout(function(){
     });
 
     if(typeof(Storage)!=="undefined"){
-         var protocal = "https";
+         var protocol = "https";
         if (window.location.protocol != "https:") //See if we're on an https connection or not
             protocol = "http"; //Change to avoid Cross Origin issues
 
         jQuery.ajax({
-            url: protocal+"://steamcommunity.com/profiles/"+g_steamID+"/inventory/json/440/2",
+            url: protocol+"://steamcommunity.com/profiles/"+g_steamID+"/inventory/json/440/2",
             dataType: 'json',
             success: function( data ){
+                console.log(data);
                 yourItems = data;
             },
             error: function(data){
@@ -267,7 +268,7 @@ setTimeout(function(){
         });
         
         jQuery.ajax({
-            url: protocal+"://steamcommunity.com/profiles/"+g_ulTradePartnerSteamID+"/inventory/json/440/2",
+            url: protocol+"://steamcommunity.com/profiles/"+g_ulTradePartnerSteamID+"/inventory/json/440/2",
             dataType: 'json',
             success: function( data ){
                 theirItems = data;

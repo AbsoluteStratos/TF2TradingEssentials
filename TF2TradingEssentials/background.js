@@ -51,13 +51,14 @@ function update_bptf_prices () {
 	console.log("Updating Backpack.tf Prices")
 	//Get the latest bp.tf prices
 	try{
-		chrome.storage.local.set({'backpackPriceCache':new Date().getTime()});
 		$.ajax({
 			url:"http://backpack.tf/api/IGetPrices/v3/?format=json&key=52b8b9224dd7b8fd458b4567&names=1",
 			type:"GET",
 			dataType:"json",
 			success:function(data){
-				chrome.storage.local.set({'backpackPrices':JSON.stringify(data)})
+				if(data["response"]["success"]==1)
+					chrome.storage.local.set({'backpackPrices':JSON.stringify(data)})
+					chrome.storage.local.set({'backpackPriceCache':new Date().getTime()});
 			},
 			error:function(data){
 				console.log(data);
