@@ -70,15 +70,19 @@ function update_bptf_prices () {
 
 chrome.storage.local.get('backpackPriceCache', function(data){
 	if(data.backpackPriceCache == null){
+		updating =true;
 		update_bptf_prices();
 	}
 	else if((1000*60*60*24)+parseInt(data.backpackPriceCache)< parseInt(new Date().getTime())){
+		updating =true;
 		update_bptf_prices();
 	}
-});
-
-chrome.storage.local.get('backpackPrices', function(data){
-	if(data.backpackPrices == null){
-		update_bptf_prices();
+	else //Check to see if bp.tf prices exist
+	{
+		chrome.storage.local.get('backpackPrices', function(data){
+			if(data.backpackPrices == null){
+				update_bptf_prices();
+			}
+		});
 	}
 });

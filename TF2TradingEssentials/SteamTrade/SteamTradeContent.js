@@ -37,6 +37,7 @@ if(typeof(Storage)!=="undefined")
         });
 	}
 
+	//Check steam tool settings
 	chrome.storage.local.get('steamTools',function(data){
 		if(data.steamTools == "True"){
 			inject_page_script();
