@@ -125,5 +125,8 @@ function altDefindexs(backpackPriceData, defi){
 
 //Trading Essentials Text
 setTimeout(function(){
-    $("#main>.wrapper").prepend("<div style='height:50px;border-radius:8px;width:25%;background: linear-gradient(#1A1A1A,#151515);cursor: default;margin-bottom:10px;'><span style='line-height:50px'><font size=5 color='#FF9900' face='Arial'><center>TF2 Trading Essentials</center></font></span></div>");
+    if(!$('#te_title').length)
+    {
+        $("#main>.wrapper").prepend("<div id='te_title' style='height:50px;border-radius:8px;width:25%;background: linear-gradient(#1A1A1A,#151515);cursor:default;margin-bottom:10px;'><span style='line-height:50px'><font size=5 color='#FF9900' face='Arial'><center>TF2 Trading Essentials</center></font></span></div>");
+    }
 },5);
